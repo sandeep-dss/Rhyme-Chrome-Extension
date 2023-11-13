@@ -1,0 +1,23 @@
+
+{
+    "manifest_version": 2,
+    "name": "RhymeHeadlines",
+    "version": "1.0",
+    "description": "Change headlines on republicworld.com into mini rhymes.",
+    "permissions": ["activeTab", "storage", "webNavigation", "https://*/*"],
+    "browser_action": {
+      "default_icon": {
+        "16": "images/chrome.png",
+        "48": "images/chrome.png",
+        "128": "images/chrome.png"
+      },
+      "default_title": "Rhyme Headlines"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://www.republicworld.com/*"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
